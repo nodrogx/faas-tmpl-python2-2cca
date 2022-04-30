@@ -16,8 +16,11 @@ RUN addgroup -S app && adduser app -S -G app
 
 WORKDIR /home/app/
 
+COPY 2cca.py            .
 COPY index.py           .
 COPY requirements.txt   .
+
+RUN mkdir /2cca-tmp
 
 RUN chown -R app /home/app && \
   mkdir -p /home/app/python && chown -R app /home/app

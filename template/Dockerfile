@@ -5,7 +5,7 @@ ARG TARGETPLATFORM
 ARG BUILDPLATFORM
 
 # Allows you to add additional packages via build-arg
-ARG ADDITIONAL_PACKAGE
+ARG ADDITIONAL_PACKAGE="zip unzip openssl"
 
 COPY --from=watchdog /fwatchdog /usr/bin/fwatchdog
 RUN chmod +x /usr/bin/fwatchdog

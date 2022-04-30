@@ -20,7 +20,7 @@ COPY 2cca.py            .
 COPY index.py           .
 COPY requirements.txt   .
 
-RUN mkdir /2cca-tmp
+RUN mkdir 2cca-tmp
 
 RUN chown -R app /home/app && \
   mkdir -p /home/app/python && chown -R app /home/app
